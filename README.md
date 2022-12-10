@@ -1,4 +1,4 @@
 # learn_flutter
 
 Creation: 
- - flutter create <app-name>
+ - ```flutter create <app-name>```
