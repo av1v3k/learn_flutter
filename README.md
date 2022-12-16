@@ -36,3 +36,13 @@ Scaffold is a Widget
  mainAxisAlignment - horizontal axis.
  crossAxisAlignment - Vertical axis.
 
+ Understating State:
+
+ - User Input -> Widget -> Render UI. (Stateless Class)
+ - User Input -> Widget[State] -> Render UI. (Stateful Class)
+
+- How to maintain State ?
+ - Change the MyApp to extend with 'StatefulWidget' Class; There is a createState() method which in-turn calls the other class extending 'State' class.
+ - Wrap the existing class extending State<MyApp> class and rename it to 'MyAppState'
+ - There is also a method setState() method for maintaining state.
+
