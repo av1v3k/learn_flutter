@@ -1,41 +1,51 @@
 import 'package:flutter/material.dart';
 
+import './question.dart';
+
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
-  var questionIndex = 0;
+class _MyAppState extends State<MyApp> {
+  var _questionIndex = 0;
+  const double _buttonfontSize = 10;
 
   void answerFunction() {
     setState(() {
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     var bodyColumnChildren1 = [
-      ElevatedButton(onPressed: answerFunction, child: Text('Red')),
       ElevatedButton(
-          onPressed: () => print('2nd button pressed!'), child: Text('Blue')),
+          onPressed: answerFunction,
+          child: const Text('Red', style: TextStyle(fontSize: _buttonfontSize))),
+      ElevatedButton(
+          onPressed: () => print('2nd button pressed!'),
+          child: const Text('Blue', style: TextStyle(fontSize: _buttonfontSize))),
     ];
 
     var bodyColumnChildren2 = [
-      ElevatedButton(onPressed: answerFunction, child: Text('Purple')),
+      ElevatedButton(
+          onPressed: answerFunction,
+          child: const Text('Purple', style: TextStyle(fontSize: _buttonfontSize))),
       ElevatedButton(
           onPressed: () {
             print('yello b=pressed');
           },
-          child: Text('Yellow')),
+          child: const Text('Yellow', style: TextStyle(fontSize: _buttonfontSize))),
     ];
 
     var questions = [
@@ -51,10 +61,7 @@ class MyAppState extends State<MyApp> {
                   style: TextStyle(color: Colors.black)),
               backgroundColor: Colors.amberAccent),
           body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-            Text(
-              questions[questionIndex],
-              style: const TextStyle(color: Colors.black87),
-            ),
+            Question(questions[_questionIndex]),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

@@ -46,3 +46,23 @@ Scaffold is a Widget
  - Wrap the existing class extending State<MyApp> class and rename it to 'MyAppState'
  - There is also a method setState() method for maintaining state.
 
+
+Using Private Properties:
+- State extend class, variables prepended with '_' denoting it is private.
+
+
+What is diff b/w positional parameter & named parameter ?
+
+ - https://stackoverflow.com/questions/13264230/what-is-the-difference-between-named-and-positional-parameters-in-dart
+
+
+Making a separate StatelessWidget using 'Question' class and into a separate file.
+
+- Used Container/SizedBox to wrap the Text widget to center the question text, which has child as argument.
+
+FAQs:
+
+
+- What is the diff b/w Container & SizedBox?
+- What is const vs final vs static keywords ?
+
