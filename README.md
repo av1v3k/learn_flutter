@@ -66,3 +66,5 @@ FAQs:
 - What is the diff b/w Container & SizedBox?
 - What is const vs final vs static keywords ?
 
+Created Answer Class and passed the callback for setting state.
+- Passed Button text and callback for instanting Answer class.

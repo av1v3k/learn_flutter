@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './question.dart';
+import './answer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
-  const double _buttonfontSize = 10;
+  // const double _buttonfontSize = 10;
 
   void answerFunction() {
     setState(() {
@@ -28,24 +29,17 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    var bodyColumnChildren1 = [
-      ElevatedButton(
-          onPressed: answerFunction,
-          child: const Text('Red', style: TextStyle(fontSize: _buttonfontSize))),
-      ElevatedButton(
-          onPressed: () => print('2nd button pressed!'),
-          child: const Text('Blue', style: TextStyle(fontSize: _buttonfontSize))),
-    ];
+    var bodyColumnChildren1 = [Answer('Red', answerFunction), Answer('Blue', answerFunction)];
 
     var bodyColumnChildren2 = [
       ElevatedButton(
           onPressed: answerFunction,
-          child: const Text('Purple', style: TextStyle(fontSize: _buttonfontSize))),
+          child: const Text('Purple', style: TextStyle(fontSize: 15))),
       ElevatedButton(
           onPressed: () {
             print('yello b=pressed');
           },
-          child: const Text('Yellow', style: TextStyle(fontSize: _buttonfontSize))),
+          child: const Text('Yellow', style: TextStyle(fontSize: 15))),
     ];
 
     var questions = [
