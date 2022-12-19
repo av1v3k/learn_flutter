@@ -27,23 +27,27 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  List questions = [
-    {
-      "questionText": "What is your favourite Color?",
-      "answer": ["Red", "Blue", "Green", "Yellow"]
-    },
-    {
-      "questionText": "What is your favourite Sweet?",
-      "answer": ["Jamun", "Candy", "Ice-cream", "Falooda"]
-    },
-    {
-      "questionText": "What is your favourite Hobby?",
-      "answer": ["Running", "Reading", "Music", "Travel"]
-    }
-  ];
-
   @override
   Widget build(BuildContext context) {
+    List questions = const [
+      {
+        "questionText": "What is your favourite Color?",
+        "answer": ["Red", "Blue", "Green", "Yellow"]
+      },
+      {
+        "questionText": "What is your favourite Sweet?",
+        "answer": ["Jamun", "Candy", "Ice-cream", "Falooda"]
+      },
+      {
+        "questionText": "What is your favourite Hobby?",
+        "answer": ["Running", "Reading", "Music", "Travel"]
+      }
+    ];
+
+    var pack = const ['dummy'];
+    pack = [];
+    print(pack);
+
     List<Widget> bodyColumnChildren1 = [
       Answer('Red', answerFunction),
       Answer('Blue', answerFunction)
@@ -57,12 +61,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
+              centerTitle: true,
               title: const Text('Rambo feeds',
                   style: TextStyle(color: Colors.black)),
               backgroundColor: Colors.amberAccent),
           body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             Question(questions[_questionIndex]['questionText']),
-            ...(questions[_questionIndex]['answer'] as List<String>).map((answer) {
+            ...(questions[_questionIndex]['answer'] as List<String>)
+                .map((answer) {
               return Answer(answer, answerFunction);
             }).toList()
             // Answer('Red', answerFunction),

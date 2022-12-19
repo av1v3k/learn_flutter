@@ -8,7 +8,7 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: 150,
+        width: double.infinity,// 150
         child: ElevatedButton(
             onPressed: selectHandler,
             style: ElevatedButton.styleFrom(
