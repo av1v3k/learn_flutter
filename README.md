@@ -68,3 +68,13 @@ FAQs:
 
 Created Answer Class and passed the callback for setting state.
 - Passed Button text and callback for instanting Answer class.
+
+
+Modified question Array to Map(Array of Object as in JS)
+
+- changed question of type 'var' to 'List' or when referred in code, use .toString() to convert into string;
+
+Now, for each question Object, How to render the answer List ?
+
+- The custom Layout(by me) is changing as followed by Udemy Tut. :(
+- Used List<String>, toList(), spread operator to expand the list.

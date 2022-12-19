@@ -27,47 +27,57 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  List questions = [
+    {
+      "questionText": "What is your favourite Color?",
+      "answer": ["Red", "Blue", "Green", "Yellow"]
+    },
+    {
+      "questionText": "What is your favourite Sweet?",
+      "answer": ["Jamun", "Candy", "Ice-cream", "Falooda"]
+    },
+    {
+      "questionText": "What is your favourite Hobby?",
+      "answer": ["Running", "Reading", "Music", "Travel"]
+    }
+  ];
+
   @override
   Widget build(BuildContext context) {
-    var bodyColumnChildren1 = [Answer('Red', answerFunction), Answer('Blue', answerFunction)];
-
-    var bodyColumnChildren2 = [
-      ElevatedButton(
-          onPressed: answerFunction,
-          child: const Text('Purple', style: TextStyle(fontSize: 15))),
-      ElevatedButton(
-          onPressed: () {
-            print('yello b=pressed');
-          },
-          child: const Text('Yellow', style: TextStyle(fontSize: 15))),
+    List<Widget> bodyColumnChildren1 = [
+      Answer('Red', answerFunction),
+      Answer('Blue', answerFunction)
     ];
 
-    var questions = [
-      'What is your favourite Color?',
-      'What is your favourite Sweet?',
-      'What is your favourite Bomb?'
+    List<Widget> bodyColumnChildren2 = [
+      Answer('Purple', answerFunction),
+      Answer('Yellow', answerFunction)
     ];
 
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-              title: const Text('Title text',
+              title: const Text('Rambo feeds',
                   style: TextStyle(color: Colors.black)),
               backgroundColor: Colors.amberAccent),
           body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-            Question(questions[_questionIndex]),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(children: bodyColumnChildren1),
-                Column(
-                  children: bodyColumnChildren2,
-                )
-              ],
-            ),
+            Question(questions[_questionIndex]['questionText']),
+            ...(questions[_questionIndex]['answer'] as List<String>).map((answer) {
+              return Answer(answer, answerFunction);
+            }).toList()
+            // Answer('Red', answerFunction),
+            // Answer('Blue', answerFunction),
+            // Answer('Purple', answerFunction),
+            // Answer('Yellow', answerFunction)
             // Row(
-            //   children: bodyColumnChildren,
-            // )
+            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //   children: [
+            //     Column(children: bodyColumnChildren1),
+            //     Column(
+            //       children: bodyColumnChildren2,
+            //     )
+            //   ],
+            // ),
           ])),
     );
   }
