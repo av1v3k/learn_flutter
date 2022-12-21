@@ -92,3 +92,16 @@ const can also be used to value as well - And that means, values can't be change
  Dart supports === long time back? now it no more supports. Why?
   For equality Dart supports only '=='
 
+- null value && null safety
+
+Only when declared with 'var' keyword, the variable is null, all other decalaration it is expecting a value to be assigned.
+
+- To allow null in a variable,
+
+String? person = "Messi"; 
+person = null; // This will work.
+
+Why not var? person = "Messi" // This will not work.
+
+
+
