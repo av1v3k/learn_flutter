@@ -18,6 +18,20 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  List questions = const [
+    {
+      "questionText": "What is your favourite Color?",
+      "answer": ["Red", "Blue", "Green", "Yellow"]
+    },
+    {
+      "questionText": "What is your favourite Sweet?",
+      "answer": ["Jamun", "Candy", "Ice-cream", "Falooda"]
+    },
+    {
+      "questionText": "What is your favourite Hobby?",
+      "answer": ["Running", "Reading", "Music", "Travel"]
+    }
+  ];
   var _questionIndex = 0;
   // const double _buttonfontSize = 10;
 
@@ -25,38 +39,27 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
+
+    if(_questionIndex < questions.length) {
+      print('Yes ! some more questions');
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    List questions = const [
-      {
-        "questionText": "What is your favourite Color?",
-        "answer": ["Red", "Blue", "Green", "Yellow"]
-      },
-      {
-        "questionText": "What is your favourite Sweet?",
-        "answer": ["Jamun", "Candy", "Ice-cream", "Falooda"]
-      },
-      {
-        "questionText": "What is your favourite Hobby?",
-        "answer": ["Running", "Reading", "Music", "Travel"]
-      }
-    ];
-
     var pack = const ['dummy'];
     pack = [];
     print(pack);
 
-    List<Widget> bodyColumnChildren1 = [
-      Answer('Red', answerFunction),
-      Answer('Blue', answerFunction)
-    ];
+    // List<Widget> bodyColumnChildren1 = [
+    //   Answer('Red', answerFunction),
+    //   Answer('Blue', answerFunction)
+    // ];
 
-    List<Widget> bodyColumnChildren2 = [
-      Answer('Purple', answerFunction),
-      Answer('Yellow', answerFunction)
-    ];
+    // List<Widget> bodyColumnChildren2 = [
+    //   Answer('Purple', answerFunction),
+    //   Answer('Yellow', answerFunction)
+    // ];
 
     return MaterialApp(
       home: Scaffold(

@@ -85,3 +85,10 @@ final - runtime fixed/constant variable.
 const - compile time fixed/constant variable.
 
 const can also be used to value as well - And that means, values can't be changed
+
+- if ... loop
+ sample if loop
+
+ Dart supports === long time back? now it no more supports. Why?
+  For equality Dart supports only '=='
+
