@@ -105,3 +105,10 @@ Why not var? person = "Messi" // This will not work and null check is available 
 
 For better experience ?
  - Center() widget & ternirary operator - to avoid stack overflow error of array.
+
+modified answerFunction / answerQuestion to accept argument 'score', and also changed the answer List/Array containing with Map/Object to have 'text' & 'score'
+
+NOTE: A value of type 'Null' can't be assigned to a parameter of type 'int' in a const constructor.
+Try using a subtype, or removing the keyword 'const'.
+
+The above error occurred while calling <Result> Widget with const prepended.

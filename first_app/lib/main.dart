@@ -48,13 +48,12 @@ class _MyAppState extends State<MyApp> {
     }
   ];
   var _questionIndex = 0;
-  var _totalScore = 0;
+  int _totalScore = 0;
   // const double _buttonfontSize = 10;
 
   void _answerQuestion(int score) {
-
     _totalScore = _totalScore + score;
-    
+
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
@@ -75,7 +74,7 @@ class _MyAppState extends State<MyApp> {
               backgroundColor: Colors.amberAccent),
           body: _questionIndex < questions.length
               ? Quiz(questions, _questionIndex, _answerQuestion)
-              : const Result()),
+              : Result(_totalScore)),
     );
   }
 }

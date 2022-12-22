@@ -8,16 +8,12 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: double.infinity,// 150
+        width: double.infinity, // 150
         child: ElevatedButton(
             onPressed: selectHandler,
             style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.black,
                 backgroundColor: Colors.amberAccent),
             child: Text(buttonText, style: const TextStyle(fontSize: 15))));
-    //  ElevatedButton(
-    //     onPressed: selectHandler,
-    //     style: ElevatedButton.styleFrom(foregroundColor: Colors.black, backgroundColor: Colors.amberAccent),
-    //     child: Text(buttonText, style: const TextStyle(fontSize: 15)));
   }
 }
