@@ -101,7 +101,7 @@ Only when declared with 'var' keyword, the variable is null, all other decalarat
 String? person = "Messi"; 
 person = null; // This will work.
 
-Why not var? person = "Messi" // This will not work.
+Why not var? person = "Messi" // This will not work and null check is available 2.11.0.
 
-
-
+For better experience ?
+ - Center() widget & ternirary operator - to avoid stack overflow error of array.

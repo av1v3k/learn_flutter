@@ -40,26 +40,13 @@ class _MyAppState extends State<MyApp> {
       _questionIndex = _questionIndex + 1;
     });
 
-    if(_questionIndex < questions.length) {
+    if (_questionIndex < questions.length) {
       print('Yes ! some more questions');
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    var pack = const ['dummy'];
-    pack = [];
-    print(pack);
-
-    // List<Widget> bodyColumnChildren1 = [
-    //   Answer('Red', answerFunction),
-    //   Answer('Blue', answerFunction)
-    // ];
-
-    // List<Widget> bodyColumnChildren2 = [
-    //   Answer('Purple', answerFunction),
-    //   Answer('Yellow', answerFunction)
-    // ];
 
     return MaterialApp(
       home: Scaffold(
@@ -68,26 +55,17 @@ class _MyAppState extends State<MyApp> {
               title: const Text('Rambo feeds',
                   style: TextStyle(color: Colors.black)),
               backgroundColor: Colors.amberAccent),
-          body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-            Question(questions[_questionIndex]['questionText']),
-            ...(questions[_questionIndex]['answer'] as List<String>)
-                .map((answer) {
-              return Answer(answer, answerFunction);
-            }).toList()
-            // Answer('Red', answerFunction),
-            // Answer('Blue', answerFunction),
-            // Answer('Purple', answerFunction),
-            // Answer('Yellow', answerFunction)
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //   children: [
-            //     Column(children: bodyColumnChildren1),
-            //     Column(
-            //       children: bodyColumnChildren2,
-            //     )
-            //   ],
-            // ),
-          ])),
+          body: _questionIndex < questions.length
+              ? Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Question(questions[_questionIndex]['questionText']),
+                  ...(questions[_questionIndex]['answer'] as List<String>)
+                      .map((answer) {
+                    return Answer(answer, answerFunction);
+                  }).toList()
+                ])
+              : const Center(
+                  child: Text('Thank you for playing'),
+                )),
     );
   }
 }
