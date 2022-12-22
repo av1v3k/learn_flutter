@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './question.dart';
-import './answer.dart';
+import './quiz.dart';
+import './result.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +47,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
@@ -56,16 +55,8 @@ class _MyAppState extends State<MyApp> {
                   style: TextStyle(color: Colors.black)),
               backgroundColor: Colors.amberAccent),
           body: _questionIndex < questions.length
-              ? Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-                  Question(questions[_questionIndex]['questionText']),
-                  ...(questions[_questionIndex]['answer'] as List<String>)
-                      .map((answer) {
-                    return Answer(answer, answerFunction);
-                  }).toList()
-                ])
-              : const Center(
-                  child: Text('Thank you for playing'),
-                )),
+              ? Quiz(questions, _questionIndex, answerFunction)
+              : const Result()),
     );
   }
 }
