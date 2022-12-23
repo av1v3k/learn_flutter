@@ -116,3 +116,6 @@ The above error occurred while calling <Result> Widget with const prepended.
 NOTE: To wrap a widget with another widget, Flutter + VSCode has a shortcut,
 
 MACOS: Command + .
+
+NOTE: The FlatButton, RaisedButton and OutlineButton widgets have been replaced by TextButton, ElevatedButton, and OutlinedButton respectively. Ref: https://docs.flutter.dev/release/breaking-changes/buttons
+

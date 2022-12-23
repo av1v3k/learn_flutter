@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
+  final VoidCallback resetQuiz;
 
   String get _resultPhrase {
     String resultText = 'Awesome !';
@@ -15,7 +16,7 @@ class Result extends StatelessWidget {
     return resultText;
   }
 
-  const Result(this.resultScore, {super.key});
+  const Result(this.resultScore, this.resetQuiz, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +28,10 @@ class Result extends StatelessWidget {
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             textAlign: TextAlign.center,
           ),
+          TextButton(
+            onPressed: resetQuiz,
+            child: const Text('Reset Quiz'),
+          )
         ],
       ),
     );
