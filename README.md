@@ -119,3 +119,25 @@ MACOS: Command + .
 
 NOTE: The FlatButton, RaisedButton and OutlineButton widgets have been replaced by TextButton, ElevatedButton, and OutlinedButton respectively. Ref: https://docs.flutter.dev/release/breaking-changes/buttons
 
+Syntax for Styling Button's:
+============================
+Example:
+-------
+1. ElevatedButton(
+  child: Text(''),
+  onPressed: (){},
+  style: ElevatedButton.styleFrom( // .styleFrom() is common for all buttons
+    primary: Colors.orange,
+    onPrimary: Colors.white
+  )
+)
+
+2. FlatButton(
+  child: Text(''),
+  onPressed: (){},
+  style: ElevatedButton.styleFrom( // .styleFrom() is common for all buttons.
+    primary: Colors.orange,
+    onPrimary: Colors.white
+  )
+)
+
