@@ -112,3 +112,7 @@ NOTE: A value of type 'Null' can't be assigned to a parameter of type 'int' in a
 Try using a subtype, or removing the keyword 'const'.
 
 The above error occurred while calling <Result> Widget with const prepended.
+
+NOTE: To wrap a widget with another widget, Flutter + VSCode has a shortcut,
+
+MACOS: Command + .
