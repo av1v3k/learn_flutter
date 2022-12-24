@@ -127,17 +127,19 @@ Example:
   child: Text(''),
   onPressed: (){},
   style: ElevatedButton.styleFrom( // .styleFrom() is common for all buttons
-    primary: Colors.orange,
+    primary: Colors.orange, // Background color
+    onPrimary: Colors.white // Foreground color
+  )
+)
+
+2. TextButton(
+  child: Text(''),
+  onPressed: (){},
+  style: ElevatedButton.styleFrom( // .styleFrom() is common for all buttons.
+    primary: Colors.orange, // This is for text color, there is no background color for TextButton.
     onPrimary: Colors.white
   )
 )
 
-2. FlatButton(
-  child: Text(''),
-  onPressed: (){},
-  style: ElevatedButton.styleFrom( // .styleFrom() is common for all buttons.
-    primary: Colors.orange,
-    onPrimary: Colors.white
-  )
-)
+4hrs of Basic Flutter Basics comes to end !
 
