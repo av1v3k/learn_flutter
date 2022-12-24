@@ -144,8 +144,7 @@ Example:
 4hrs of Basic Flutter Basics comes to end !
 
 iOS Simulator:
-
-
+==============
  - Use xCode to test your app.
  - open -a Simulator.app (For Development + Testing no need of paid account. Only for Publish we need paid account.)
 
