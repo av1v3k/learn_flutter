@@ -143,10 +143,16 @@ Example:
 
 4hrs of Basic Flutter Basics comes to end !
 
+1st Assignment re-done !
+=======================
+
+Done - refer home_work_1_flutter_basic folder.
+
 iOS Simulator:
 ==============
  - Use xCode to test your app.
  - open -a Simulator.app (For Development + Testing no need of paid account. Only for Publish we need paid account.)
+
 
 25 Dec, 2022:
 
