@@ -21,4 +21,4 @@ Assignment 1:
 1. Create a new Flutter App. - Done.
 2. Output an AppBar & some text below it. - Done.
 3. Add a button which changes the text. - Done.
-4. Splitted into App, btnW, textW files - Done.
+4. Splitted into App, btnW, textW files - Done
