@@ -148,3 +148,9 @@ iOS Simulator:
  - Use xCode to test your app.
  - open -a Simulator.app (For Development + Testing no need of paid account. Only for Publish we need paid account.)
 
+25 Dec, 2022:
+
+Yippee! Another App - Personal Expense App.
+
+- Widgets, Theming & Material Design, Working with Images & Fonts
+- Business Logic to App.
