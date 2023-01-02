@@ -192,3 +192,7 @@ Try removing 'const' from the constructor invocation.
 - removed const from all the classes.
 
 Yipee! dart diagnostic tool was much helpful.
+
+Added Custom List using multiple widget combination.
+
+- added container's margin, padding, decoration for styling the amount Container widget
