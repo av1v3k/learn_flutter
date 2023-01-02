@@ -167,3 +167,27 @@ Widgets:
  - RaisedButton
  - GestureDetector
  - InkWell
+
+```flutter create expense_app```
+
+- diff b/w SizedBox & Container? - 
+- Column & Row - which was covered before.
+- along with this MainAxis & CrossAxis was also discussed.
+
+Creating a Model:
+
+Transaction Model
+- what is 'late' keyword ? - Can also use run time constant keyword 'final' to all it's properties as discussed before.
+- And also add required decorator before each property.
+
+```error```
+Can't define the 'const' constructor because the field 'transactions' is initialized with a non-constant value.
+
+- removed const from all the classes especially the <Widget>
+
+The constructor being called isn't a const constructor.
+Try removing 'const' from the constructor invocation.
+
+- removed const from all the classes.
+
+Yipee! dart diagnostic tool was much helpful.
