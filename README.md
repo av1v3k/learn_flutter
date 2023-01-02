@@ -196,3 +196,4 @@ Yipee! dart diagnostic tool was much helpful.
 Added Custom List using multiple widget combination.
 
 - added container's margin, padding, decoration for styling the amount Container widget
+- added fontweight, fontsize using style property & TextStyle() widget.(Voila!)
