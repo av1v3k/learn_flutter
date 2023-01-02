@@ -185,6 +185,7 @@ Can't define the 'const' constructor because the field 'transactions' is initial
 
 - removed const from all the classes especially the <Widget>
 
+```error```
 The constructor being called isn't a const constructor.
 Try removing 'const' from the constructor invocation.
 
