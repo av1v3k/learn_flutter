@@ -55,17 +55,29 @@ class MyHomePage extends StatelessWidget {
                               vertical: 20, horizontal: 15),
                           decoration: BoxDecoration(
                               border:
-                                  Border.all(width: 2, color: Colors.black)),
+                                  Border.all(width: 2, color: Colors.purple)),
                           padding: const EdgeInsets.all(10),
                           child: Text(
                             tx.amount.toString(),
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                color: Colors.purple),
                           ),
                         ),
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(tx.title),
-                            Text(tx.date.toString())
+                            Text(
+                              tx.title,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16),
+                            ),
+                            Text(
+                              tx.date.toString(),
+                              style: const TextStyle(
+                                  color: Colors.grey),
+                            )
                           ],
                         )
                       ],
