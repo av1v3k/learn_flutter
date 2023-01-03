@@ -1,13 +1,14 @@
 import "package:flutter/material.dart";
+import 'package:intl/intl.dart';
 
 import "./transaction.dart";
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             Column(
-              children: [
+              children: <Widget>[
                 ...transactions.map((tx) {
                   return Card(
                     child: Row(
@@ -74,7 +75,7 @@ class MyHomePage extends StatelessWidget {
                                   fontWeight: FontWeight.bold, fontSize: 16),
                             ),
                             Text(
-                              tx.date.toString(),
+                              DateFormat.yMMMEd().add_jm().format(tx.date),
                               style: const TextStyle(color: Colors.grey),
                             )
                           ],
