@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'My Expense App', home: MyHomePage());
+    return MaterialApp(home: MyHomePage());
   }
 }
 
@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
           centerTitle: true,
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
@@ -43,6 +43,27 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.blueAccent,
                 elevation: 3,
                 child: Text('Chart later'),
+              ),
+            ),
+            Card(
+              elevation: 3,
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: const <Widget>[
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Title'),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Amount'),
+                    ),
+                    TextButton(
+                      onPressed: null,
+                      child: Text('Add transaction', style: TextStyle(color: Colors.purple),),
+                    )
+                  ],
+                ),
               ),
             ),
             Column(
