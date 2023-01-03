@@ -213,4 +213,10 @@ diff b/w Container vs Column/Row
 - String Interpolation - ${<value>}
 
 - How to format dates ?
+ using intl pub package specifying in pubspec.yaml file with version. VSCode automatically installs.
+
+- How to get user inputs ?
+ using TextField()
+
+- Instead of using onChange event of TextField(), use TextFieldController.text to get the value of the Input field when pressing Click of the button.
 

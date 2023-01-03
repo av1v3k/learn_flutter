@@ -24,6 +24,12 @@ class MyHomePage extends StatelessWidget {
         id: 'R2', amount: 21.44, title: 'Slipper Tr', date: DateTime.now())
   ];
 
+  // String titleInput;
+  // String amountInput;
+
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
+
   MyHomePage({super.key});
 
   @override
@@ -51,16 +57,31 @@ class MyHomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(5),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  children: const <Widget>[
-                    TextField(
+                  children: <Widget>[
+                    const TextField(
+                      // onChanged: (value) {
+                      //   titleInput = value;
+                      // },
                       decoration: InputDecoration(labelText: 'Title'),
                     ),
-                    TextField(
+                    const TextField(
+                      // onChanged: (value) {
+                      //   amountInput = value;
+                      // },
                       decoration: InputDecoration(labelText: 'Amount'),
                     ),
                     TextButton(
-                      onPressed: null,
-                      child: Text('Add transaction', style: TextStyle(color: Colors.purple),),
+                      onPressed: () {
+                        transactions.add(Transaction(
+                            id: 'asdf',
+                            amount: amountController.text as double,
+                            title: titleController.text,
+                            date: DateTime.now()));
+                      },
+                      child: const Text(
+                        'Add transaction',
+                        style: TextStyle(color: Colors.purple),
+                      ),
                     )
                   ],
                 ),
