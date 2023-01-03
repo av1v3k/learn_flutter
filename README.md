@@ -197,3 +197,17 @@ Added Custom List using multiple widget combination.
 
 - added container's margin, padding, decoration for styling the amount Container widget
 - added fontweight, fontsize using style property & TextStyle() widget.(Voila!)
+
+diff b/w Container vs Column/Row
+
+- Container
+  - Takes 1 child
+  - Rich alignment & styling options.
+  - Flexible width.
+
+- Column/Row
+  - Takes multiple children as argument.
+  - Alignment & no styling.
+  - Always takes complete width(row) / height(column)
+
+  

@@ -36,9 +36,9 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            const SizedBox(
-              width: double.infinity,
-              child: Card(
+            Container(
+              margin: const EdgeInsets.all(0),
+              child: const Card(
                 color: Colors.blueAccent,
                 elevation: 3,
                 child: Text('Chart later'),
@@ -75,8 +75,7 @@ class MyHomePage extends StatelessWidget {
                             ),
                             Text(
                               tx.date.toString(),
-                              style: const TextStyle(
-                                  color: Colors.grey),
+                              style: const TextStyle(color: Colors.grey),
                             )
                           ],
                         )
