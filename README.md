@@ -220,3 +220,9 @@ diff b/w Container vs Column/Row
 
 - Instead of using onChange event of TextField(), use TextFieldController.text to get the value of the Input field when pressing Click of the button.
 
+```Err0r```
+why this wsa throwning error ?
+amountController.text as double - didn;t work
+double.tryParse - didn;t work
+Invalid const value - remove unncessary const declaration[Resolved]
+

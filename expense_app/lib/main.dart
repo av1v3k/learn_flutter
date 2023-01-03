@@ -58,25 +58,29 @@ class MyHomePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                    const TextField(
+                    TextField(
                       // onChanged: (value) {
                       //   titleInput = value;
                       // },
-                      decoration: InputDecoration(labelText: 'Title'),
+                      decoration: const InputDecoration(labelText: 'Title'),
+                      controller: titleController,
                     ),
-                    const TextField(
+                    TextField(
                       // onChanged: (value) {
                       //   amountInput = value;
                       // },
-                      decoration: InputDecoration(labelText: 'Amount'),
+                      decoration: const InputDecoration(labelText: 'Amount'),
+                      controller: amountController,
                     ),
                     TextButton(
                       onPressed: () {
-                        transactions.add(Transaction(
-                            id: 'asdf',
-                            amount: amountController.text as double,
-                            title: titleController.text,
-                            date: DateTime.now()));
+                        print(titleController.text);
+                        print(amountController.text);
+                        // transactions.add(Transaction(
+                        //     id: 'asdf',
+                        //     amount: double.tryParse(amountController.text) as double,
+                        //     title: titleController.text,
+                        //     date: DateTime.now()));
                       },
                       child: const Text(
                         'Add transaction',
