@@ -226,8 +226,11 @@ amountController.text as double - didn;t work
 double.tryParse - didn;t work
 Invalid const value - remove unncessary const declaration[Resolved]
 
-Splitted Widget to small Widgets
+Splitted Widget to small Widgets for flexibility & to manage state
 - transation_container.dart
   - transaction_list.dart
   - transaction_input.dart
+
+- added setState inside a function addtransaction() in COntainer file to add new transaction state.
+- trigger by passing fn ref to transaction input file.
 

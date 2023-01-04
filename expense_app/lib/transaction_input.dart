@@ -1,7 +1,8 @@
 import "package:flutter/material.dart";
 
 class TrasactionInput extends StatelessWidget {
-  TrasactionInput({Key? key}) : super(key: key);
+  final Function handleAddTx;
+  TrasactionInput(this.handleAddTx, {super.key});
 
   final titleController = TextEditingController();
   final amountController = TextEditingController();
@@ -25,8 +26,9 @@ class TrasactionInput extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                print(titleController.text);
-                print(amountController.text);
+                handleAddTx(titleController.text, double.parse(amountController.text));
+                // print(titleController.text);
+                // print(amountController.text);
                 // transactions.add(Transaction(
                 //     id: 'asdf',
                 //     amount: double.tryParse(amountController.text) as double,
@@ -36,6 +38,7 @@ class TrasactionInput extends StatelessWidget {
               child: const Text(
                 'Add transaction',
                 style: TextStyle(color: Colors.purple),
+                
               ),
             )
           ],
