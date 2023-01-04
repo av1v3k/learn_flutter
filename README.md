@@ -226,3 +226,8 @@ amountController.text as double - didn;t work
 double.tryParse - didn;t work
 Invalid const value - remove unncessary const declaration[Resolved]
 
+Splitted Widget to small Widgets
+- transation_container.dart
+  - transaction_list.dart
+  - transaction_input.dart
+
