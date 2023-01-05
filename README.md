@@ -236,4 +236,8 @@ Splitted Widget to small Widgets for flexibility & to manage state
 
 How to bring scrollable View?
 - Wrap the 'body' section of the Scaffold to SingleChildScrollView()
+- For TransactionList Widget alone wrap with ListView with a Container, instead of SingleChildScrollView()
+
+ListView vs ListView.builder()
+- ListView.builder() is similar to Virtual loader same as react? (Loading what's visible)
 
