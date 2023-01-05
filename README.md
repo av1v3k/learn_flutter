@@ -234,3 +234,6 @@ Splitted Widget to small Widgets for flexibility & to manage state
 - added setState inside a function addtransaction() in COntainer file to add new transaction state.
 - trigger by passing fn ref to transaction input file.
 
+How to bring scrollable View?
+- Wrap the 'body' section of the Scaffold to SingleChildScrollView()
+

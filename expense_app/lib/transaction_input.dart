@@ -27,13 +27,6 @@ class TrasactionInput extends StatelessWidget {
             TextButton(
               onPressed: () {
                 handleAddTx(titleController.text, double.parse(amountController.text));
-                // print(titleController.text);
-                // print(amountController.text);
-                // transactions.add(Transaction(
-                //     id: 'asdf',
-                //     amount: double.tryParse(amountController.text) as double,
-                //     title: titleController.text,
-                //     date: DateTime.now()));
               },
               child: const Text(
                 'Add transaction',
