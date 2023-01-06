@@ -240,5 +240,5 @@ How to bring scrollable View?
 
 ListView vs ListView.builder()
 - ListView.builder() is similar to Virtual loader same as react? (Loading what's visible)
-
+- Instead of wrapping Column with SingleChildScrollView() widget, we can use ListView() widget which has by default SingleChildScrollView()
 
