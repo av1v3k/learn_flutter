@@ -241,3 +241,4 @@ How to bring scrollable View?
 ListView vs ListView.builder()
 - ListView.builder() is similar to Virtual loader same as react? (Loading what's visible)
 
+
